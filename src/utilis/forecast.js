@@ -10,7 +10,7 @@ url='https://api.darksky.net/forecast/093d52ed6c084857cb6fdc14768f6478/'+latitud
             callback('You have entered incorrect latitude and longiude',undefined)
         }
         else{
-            callback(undefined, 'Summary: '+body.daily.data[0].summary+'Temperature: '+body.currently.temperature+' Chance of rain: '+body.currently.precipProbability
+            callback(undefined, 'Summary: '+body.daily.data[0].summary+' Temperature: '+body.currently.temperature+' TemperatureLow: '+body.daily.data[0].temperatureLow+' Temperature High: '+body.daily.data[0].temperatureHigh+' Chance of rain: '+body.currently.precipProbability
             //     {
             //     Summary: body.daily.data[0].summary,
             //     Temperature: body.currently.temperature,
