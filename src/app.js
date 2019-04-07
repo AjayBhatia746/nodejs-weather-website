@@ -5,7 +5,7 @@ const geocode=require('./utilis/geocode')
 const forecast=require('./utilis/forecast')
 //console.log(path.join(__dirname,'../public'))
 const app= express()
-
+const port=process.env.PORT || 3000
 //defining path for express config
 const publicdirectorypath=path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views');
@@ -73,6 +73,6 @@ res.render('error',{
 // ajay.com/help
 // ajay.com/about
 //template engine that we are using handle bar used to create dynamic web pages
-app.listen(3000,()=>{
-    console.log('Server is on port Number 3000')
+app.listen(port,()=>{
+    console.log('Server is on port Number '+port)
 })

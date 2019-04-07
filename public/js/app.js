@@ -8,7 +8,7 @@ const weatherform=document.querySelector('.form')
         e.preventDefault();
         const location=searchform.value
         
-            fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+            fetch('/weather?address='+location).then((response)=>{
 
             response.json().then((data)=>{
                         if(data.error){
