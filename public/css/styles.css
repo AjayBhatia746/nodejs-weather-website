@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    color:#333;
+    color:white;
 }
 img{
    
@@ -12,14 +12,32 @@ img{
 }
 .footer-myself{
     border:1px solid #cfcbb1;
+    
 }
 p{
+    color:white;
     text-align: center;
     font-size:15px;
 }
 
 body{
     background: url('/img/2.jpg');
-    background-size: cover;
+    background-size:cover;
+   
     font-family: 'helvatica';
 }
+
+.form{
+    color:white;
+}
+a{
+    padding:10px;
+    display:inline;
+    
+    
+}
+a:hover {
+    
+    cursor: pointer;
+    
+  }
