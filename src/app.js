@@ -10,7 +10,6 @@ const port=process.env.PORT || 3000
 const publicdirectorypath=path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views');
 const partialpath=path.join(__dirname,'../templates/partials')
-
 //setup handlebar engine and view location
 app.set('view engine','hbs')//to tell the express that we are using hbs as the view engine
 app.set('views',viewpath)
@@ -39,6 +38,22 @@ app.get('/weather',(req,res)=>{
 
     
 })
+})
+
+app.get('/geolocation',(req,res)=>{
+    if(req.query.coords.length===0){
+        return res.send({error:'You have not entered any address'})    
+    }
+    forecast(req.query.coords[0],req.query.coords[1],(error,forecastdata)=>{
+        if(error){
+            return res.send({error})
+        }
+        res.send({
+            forecast:forecastdata,
+
+        })
+
+    })
 })
 
 
